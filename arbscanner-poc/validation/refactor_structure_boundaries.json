@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "stage": 11,
+  "parent": "Stage 10 user-verified candidate",
+  "goals": [
+    "Move static product configuration out of the pywebview API implementation while preserving arbscanner.api re-exports.",
+    "Move the SQLite schema declaration out of DB runtime methods without changing schema bytes.",
+    "Move the pure Racing source-book reconstruction out of the API module while preserving the historical private alias.",
+    "Keep frontend, provider, lifecycle, account and execution ownership unchanged."
+  ],
+  "module_boundaries": {
+    "arbscanner.config": {
+      "owns": ["DEFAULT_CONFIG", "OPERATING_MODES"],
+      "allowed_relative_imports": []
+    },
+    "arbscanner.db_schema": {
+      "owns": ["SCHEMA"],
+      "allowed_relative_imports": []
+    },
+    "arbscanner.racing_projection": {
+      "owns": ["racing_book_analysis_from_sources"],
+      "allowed_relative_imports": ["engine", "models", "racing"]
+    }
+  },
+  "compatibility_reexports": {
+    "arbscanner.api.DEFAULT_CONFIG": "arbscanner.config.DEFAULT_CONFIG",
+    "arbscanner.api.OPERATING_MODES": "arbscanner.config.OPERATING_MODES",
+    "arbscanner.api._racing_book_analysis_from_sources": "arbscanner.racing_projection.racing_book_analysis_from_sources",
+    "arbscanner.db.SCHEMA": "arbscanner.db_schema.SCHEMA"
+  },
+  "content_hashes": {
+    "default_config_canonical_json_sha256": "89ceb1bbe047f18389741ff097e1dc35a6c58ffd207273cbb830d8cd7df32001",
+    "operating_modes_canonical_json_sha256": "95111cd71e97daee0e024784728a61de5025aa51813c68ddc977b2d1252ee50b",
+    "schema_utf8_sha256": "70d269e0910ed75d14393c2013491d980ae553cba0b299e29b32d194893780d5"
+  },
+  "concentration": {
+    "stage10_api_lines": 7638,
+    "stage11_api_max_lines": 7200,
+    "stage10_db_lines": 8784,
+    "stage11_db_max_lines": 8050,
+    "frontend_must_remain_unchanged": true
+  }
+}

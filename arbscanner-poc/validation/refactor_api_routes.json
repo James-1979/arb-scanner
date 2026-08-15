@@ -1,0 +1,35 @@
+{
+  "active_route_policy": "No active frontend route is renamed or removed in Stage 09. Compatibility routes with known consumers remain public.",
+  "consumer_roots": [
+    "frontend/",
+    "worker.py",
+    "app.py",
+    "arbscanner/ (excluding API definition)",
+    "tests/"
+  ],
+  "description": "Public pywebview route consolidation contract for the verified Stage 08 -> Stage 09 transition.",
+  "removal_gate": [
+    "zero consumer references in declared roots",
+    "not present in benchmark projection manifest",
+    "not a mode-ownership safety boundary",
+    "public API classification updated",
+    "full projection comparison passes"
+  ],
+  "removed_unreferenced_routes": [
+    "archive_reset_history",
+    "cancel_job_schedule",
+    "daily_summary",
+    "detailed_market_history",
+    "engine_types",
+    "settle_now"
+  ],
+  "retained_compatibility_routes": {
+    "activate_monitor_timing": "Historical test consumer; delegates to set_operating_mode(sim).",
+    "engine_import_package": "Frontend + historical tests still consume the quarantine/validate compatibility route.",
+    "live_view_data": "Historical isolation tests consume this diagnostic LIVE-only compatibility route.",
+    "set_feed_enabled": "Historical compatibility consumer; delegates to update_venue_control with explicit SIM/LIVE mode.",
+    "stop_monitor_timing": "Historical test consumer; delegates to set_operating_mode(sim)."
+  },
+  "schema_version": 1,
+  "stage": 9
+}

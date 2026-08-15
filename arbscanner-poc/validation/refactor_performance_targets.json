@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "stage": 10,
+  "immutable_parent_stage": 9,
+  "policy": "Performance changes must preserve projection fingerprints and read-purity; query-count reduction is a hard gate and wall-clock timing is corroborating evidence only.",
+  "targets": {
+    "racing_monitor": {
+      "baseline_queries_per_projection": 100,
+      "maximum_candidate_queries_per_projection": 10,
+      "baseline_write_statements": 0,
+      "maximum_candidate_write_statements": 0,
+      "required_output_fingerprint_change": false
+    },
+    "full_projection_gate": {
+      "baseline_projection_count": 29,
+      "baseline_total_queries": 855,
+      "maximum_candidate_total_queries": 665,
+      "maximum_authority_writes": 0,
+      "maximum_blockers": 0,
+      "maximum_warnings": 0
+    }
+  },
+  "cache_policy": "No new stateful cache is introduced in Stage 10; the optimisation removes an unnecessary full-page projection from Racing Monitor instead."
+}

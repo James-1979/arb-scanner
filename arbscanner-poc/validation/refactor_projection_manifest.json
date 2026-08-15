@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "description": "Stage 02 interactive read-projection benchmark manifest. Window placeholders are resolved once by the comparison runner so Reference and Candidate receive identical inputs.",
+  "projections": [
+    {
+      "id": "dashboard_sim",
+      "method": "dashboard_overview",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "accounts_sim",
+      "method": "accounts_page",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "accounts_live",
+      "method": "accounts_page",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "sports_sim",
+      "method": "sports_overview",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "sports_live",
+      "method": "sports_overview",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "racing_sim",
+      "method": "racing_overview",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "racing_live",
+      "method": "racing_overview",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "engines_sports",
+      "method": "engines",
+      "data": {
+        "section": "sports"
+      }
+    },
+    {
+      "id": "engines_racing",
+      "method": "engines",
+      "data": {
+        "section": "racing"
+      }
+    },
+    {
+      "id": "engine_lifecycle_sports_sim",
+      "method": "engine_lifecycle",
+      "data": {
+        "section": "sports",
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "engine_lifecycle_sports_live",
+      "method": "engine_lifecycle",
+      "data": {
+        "section": "sports",
+        "mode": "live"
+      }
+    },
+    {
+      "id": "engine_lifecycle_racing_sim",
+      "method": "engine_lifecycle",
+      "data": {
+        "section": "racing",
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "engine_lifecycle_racing_live",
+      "method": "engine_lifecycle",
+      "data": {
+        "section": "racing",
+        "mode": "live"
+      }
+    },
+    {
+      "id": "racing_monitor_sim",
+      "method": "racing_monitor",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "racing_monitor_live",
+      "method": "racing_monitor",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "performance_sim",
+      "method": "performance_analytics",
+      "data": {
+        "mode": "sim",
+        "period": "all"
+      }
+    },
+    {
+      "id": "portfolio_sim",
+      "method": "portfolio_financial_state",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "portfolio_live",
+      "method": "portfolio_financial_state",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "market_analysis_sim",
+      "method": "market_analysis",
+      "data": {
+        "mode": "sim",
+        "from_utc": "__FROM_7D__",
+        "to_utc": "__TO_ANCHOR__"
+      }
+    },
+    {
+      "id": "market_analysis_live",
+      "method": "live_market_analysis",
+      "data": {
+        "mode": "live",
+        "from_utc": "__FROM_7D__",
+        "to_utc": "__TO_ANCHOR__"
+      }
+    },
+    {
+      "id": "market_heatmap_sim",
+      "method": "market_heatmap",
+      "data": {
+        "mode": "sim",
+        "from_utc": "__FROM_7D__",
+        "to_utc": "__TO_ANCHOR__",
+        "scope": "all",
+        "phase": "all"
+      }
+    },
+    {
+      "id": "market_heatmap_live",
+      "method": "live_market_heatmap",
+      "data": {
+        "mode": "live",
+        "from_utc": "__FROM_7D__",
+        "to_utc": "__TO_ANCHOR__",
+        "scope": "all",
+        "phase": "all"
+      }
+    },
+    {
+      "id": "replay_sim",
+      "method": "analytics_replay",
+      "data": {
+        "mode": "sim",
+        "days": 7
+      }
+    },
+    {
+      "id": "scenario_capital_sim",
+      "method": "scenario_capital_sources",
+      "data": {
+        "mode": "sim"
+      }
+    },
+    {
+      "id": "replay_live",
+      "method": "live_replay",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "results_live",
+      "method": "live_results",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "performance_live",
+      "method": "live_performance",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "activity_live",
+      "method": "live_execution_activity",
+      "data": {
+        "mode": "live"
+      }
+    },
+    {
+      "id": "account_integrity_sim",
+      "method": "account_integrity_report",
+      "data": {
+        "mode": "sim"
+      }
+    }
+  ]
+}
